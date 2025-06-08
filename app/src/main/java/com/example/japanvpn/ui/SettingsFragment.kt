@@ -35,32 +35,27 @@ class SettingsFragment : Fragment() {
     }
 
     private fun setupViews() {
-        // Toolbar navigation
-        binding.toolbar.setNavigationOnClickListener {
-            requireActivity().onBackPressed()
-        }
-
-        // Auto-connect switch
+        // Auto-connect setting
         binding.switchAutoConnect.setOnCheckedChangeListener { _, isChecked ->
             viewModel.setAutoConnect(isChecked)
         }
 
-        // Kill switch
+        // Kill switch setting
         binding.switchKillSwitch.setOnCheckedChangeListener { _, isChecked ->
             viewModel.setKillSwitch(isChecked)
         }
 
-        // Split tunneling
+        // Split tunneling setting
         binding.switchSplitTunneling.setOnCheckedChangeListener { _, isChecked ->
             viewModel.setSplitTunneling(isChecked)
         }
 
-        // Auto-start
+        // Auto-start setting
         binding.switchAutoStart.setOnCheckedChangeListener { _, isChecked ->
             viewModel.setAutoStart(isChecked)
         }
 
-        // Notifications
+        // Notifications setting
         binding.switchNotifications.setOnCheckedChangeListener { _, isChecked ->
             viewModel.setNotificationsEnabled(isChecked)
         }
@@ -68,10 +63,9 @@ class SettingsFragment : Fragment() {
         // Protocol selection
         binding.radioGroupProtocol.setOnCheckedChangeListener { _, checkedId ->
             val protocol = when (checkedId) {
-                binding.radioAutomatic.id -> "AUTOMATIC"
-                binding.radioUdp.id -> "UDP"
-                binding.radioTcp.id -> "TCP"
-                else -> "AUTOMATIC"
+                binding.radioUdp.id -> Server.Protocol.UDP.name
+                binding.radioTcp.id -> Server.Protocol.TCP.name
+                else -> Server.Protocol.UDP.name
             }
             viewModel.setSelectedProtocol(protocol)
         }
@@ -116,12 +110,10 @@ class SettingsFragment : Fragment() {
         viewLifecycleOwner.lifecycleScope.launch {
             // Protocol
             viewModel.selectedProtocol.collectLatest { protocol ->
-                val radioButton = when (protocol) {
-                    "UDP" -> binding.radioUdp
-                    "TCP" -> binding.radioTcp
-                    else -> binding.radioAutomatic
+                when (protocol) {
+                    Server.Protocol.UDP.name -> binding.radioUdp.isChecked = true
+                    Server.Protocol.TCP.name -> binding.radioTcp.isChecked = true
                 }
-                radioButton.isChecked = true
             }
         }
     }
