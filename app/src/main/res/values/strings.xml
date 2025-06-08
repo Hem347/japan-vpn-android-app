@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App name -->
+    <string name="app_name">Japan VPN</string>
+    
+    <!-- Main screen -->
+    <string name="select_server">Select Server</string>
+    <string name="connect">Connect</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="connecting">Connecting…</string>
+    
+    <!-- Connection status -->
+    <string name="status_connected">Connected</string>
+    <string name="status_disconnected">Not Connected</string>
+    <string name="status_connecting">Connecting…</string>
+    <string name="status_error">Connection Error</string>
+    
+    <!-- Connection Stats -->
+    <string name="connection_time">Connection Time</string>
+    <string name="data_in">Download</string>
+    <string name="data_out">Upload</string>
+    <string name="data_in_format">Download: %1$s</string>
+    <string name="data_out_format">Upload: %1$s</string>
+    <string name="data_usage_format">↑ %1$s • ↓ %2$s</string>
+    <string name="data_usage_empty">Upload: 0 KB | Download: 0 KB</string>
+    <string name="speed_format">%1$s/s</string>
+    <string name="connection_status">Connection Status</string>
+    <string name="upload_speed">Upload Speed</string>
+    <string name="download_speed">Download Speed</string>
+    <string name="no_servers_available">No Servers Available</string>
+    <string name="pull_to_refresh">Pull down to refresh server list</string>
+    
+    <!-- Bottom navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_servers">Servers</string>
+    <string name="nav_settings">Settings</string>
+    
+    <!-- Settings -->
+    <string name="settings">Settings</string>
+    <string name="auto_connect">Auto Connect</string>
+    <string name="kill_switch">Kill Switch</string>
+    <string name="protocol">VPN Protocol</string>
+    <string name="split_tunneling">Split Tunneling</string>
+    <string name="auto_start">Start on Boot</string>
+    <string name="notifications">Show Notifications</string>
+    <string name="connection_timeout">Connection Timeout</string>
+    
+    <!-- Server locations -->
+    <string-array name="server_locations">
+        <item>Tokyo - Server 1</item>
+        <item>Osaka - Server 1</item>
+        <item>Tokyo - Server 2</item>
+        <item>Osaka - Server 2</item>
+        <item>Fukuoka - Server 1</item>
+    </string-array>
+    
+    <!-- Messages -->
+    <string name="msg_vpn_permission">VPN permission is required to use this app</string>
+    <string name="msg_connection_error">Failed to connect to VPN server</string>
+    <string name="msg_connection_success">Successfully connected to VPN</string>
+    <string name="msg_disconnection_success">Successfully disconnected from VPN</string>
+    <string name="msg_connection_timeout">Connection timed out</string>
+    <string name="msg_network_error">Network error occurred</string>
+    <string name="msg_server_unreachable">Server is unreachable</string>
+    
+    <!-- Notifications -->
+    <string name="notification_channel_name">VPN Status</string>
+    <string name="notification_channel_description">Shows the current VPN connection status</string>
+    <string name="notification_connected_title">VPN Connected</string>
+    <string name="notification_connected_text">Connected to %1$s</string>
+    <string name="notification_disconnected_title">VPN Disconnected</string>
+    <string name="notification_disconnected_text">Tap to reconnect</string>
+    <string name="notification_error_title">VPN Error</string>
+    <string name="notification_error_text">%1$s</string>
+</resources>
