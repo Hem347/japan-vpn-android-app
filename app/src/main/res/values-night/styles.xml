@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark theme application theme -->
+    <style name="Theme.JapanVPN" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+        
+        <!-- Background colors -->
+        <item name="android:windowBackground">@color/background_dark</item>
+        <item name="android:navigationBarColor">@color/nav_background_dark</item>
+        
+        <!-- Text colors -->
+        <item name="android:textColorPrimary">@color/text_primary_dark</item>
+        <item name="android:textColorSecondary">@color/text_secondary_dark</item>
+        
+        <!-- Component styles -->
+        <item name="materialButtonStyle">@style/Widget.JapanVPN.Button.Dark</item>
+        <item name="bottomNavigationStyle">@style/Widget.JapanVPN.BottomNavigation.Dark</item>
+        <item name="cardViewStyle">@style/Widget.JapanVPN.CardView.Dark</item>
+    </style>
+
+    <!-- Dark Button style -->
+    <style name="Widget.JapanVPN.Button.Dark" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/text_primary_dark</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="cornerRadius">24dp</item>
+        <item name="elevation">4dp</item>
+        <item name="backgroundTint">@color/primary_dark</item>
+    </style>
+
+    <!-- Dark Bottom Navigation style -->
+    <style name="Widget.JapanVPN.BottomNavigation.Dark" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:background">@color/nav_background_dark</item>
+        <item name="itemIconTint">@color/primary</item>
+        <item name="itemTextColor">@color/primary</item>
+        <item name="elevation">8dp</item>
+    </style>
+
+    <!-- Dark Card style -->
+    <style name="Widget.JapanVPN.CardView.Dark" parent="Widget.MaterialComponents.CardView">
+        <item name="cardElevation">4dp</item>
+        <item name="cardCornerRadius">12dp</item>
+        <item name="contentPadding">16dp</item>
+        <item name="cardBackgroundColor">@color/background_dark</item>
+    </style>
+
+    <!-- Dark Switch style -->
+    <style name="Widget.JapanVPN.Switch.Dark" parent="Widget.MaterialComponents.CompoundButton.Switch">
+        <item name="thumbTint">@color/primary</item>
+        <item name="trackTint">@color/primary_dark</item>
+    </style>
+
+    <!-- Dark Spinner style -->
+    <style name="Widget.JapanVPN.Spinner.Dark" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="boxStrokeColor">@color/primary</item>
+        <item name="boxStrokeWidth">2dp</item>
+        <item name="hintTextColor">@color/primary</item>
+        <item name="android:textColorHint">@color/text_secondary_dark</item>
+    </style>
+</resources>
