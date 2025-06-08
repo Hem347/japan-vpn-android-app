@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme -->
+    <style name="Theme.JapanVPN" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+        
+        <!-- Background colors -->
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:navigationBarColor">@color/nav_background</item>
+        
+        <!-- Text colors -->
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        
+        <!-- Component styles -->
+        <item name="materialButtonStyle">@style/Widget.JapanVPN.Button</item>
+        <item name="bottomNavigationStyle">@style/Widget.JapanVPN.BottomNavigation</item>
+        <item name="cardViewStyle">@style/Widget.JapanVPN.CardView</item>
+    </style>
+
+    <!-- Button style -->
+    <style name="Widget.JapanVPN.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/button_text</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="cornerRadius">24dp</item>
+        <item name="elevation">4dp</item>
+    </style>
+
+    <!-- Bottom Navigation style -->
+    <style name="Widget.JapanVPN.BottomNavigation" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:background">@color/nav_background</item>
+        <item name="itemIconTint">@color/primary</item>
+        <item name="itemTextColor">@color/primary</item>
+        <item name="elevation">8dp</item>
+    </style>
+
+    <!-- Card style -->
+    <style name="Widget.JapanVPN.CardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardElevation">4dp</item>
+        <item name="cardCornerRadius">12dp</item>
+        <item name="contentPadding">16dp</item>
+        <item name="cardBackgroundColor">@color/background</item>
+    </style>
+
+    <!-- Switch style -->
+    <style name="Widget.JapanVPN.Switch" parent="Widget.MaterialComponents.CompoundButton.Switch">
+        <item name="thumbTint">@color/primary</item>
+        <item name="trackTint">@color/primary_dark</item>
+    </style>
+
+    <!-- Spinner style -->
+    <style name="Widget.JapanVPN.Spinner" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="boxStrokeColor">@color/primary</item>
+        <item name="boxStrokeWidth">2dp</item>
+        <item name="hintTextColor">@color/primary</item>
+    </style>
+</resources>
